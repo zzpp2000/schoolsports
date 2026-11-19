@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_upload" android:title="上传测试数据" />
+    <item android:id="@+id/menu_reupload" android:title="重新上传失败数据" />
+    <item android:id="@+id/menu_delete_selected" android:title="删除选中记录" />
+    <item android:id="@+id/menu_delete_all" android:title="删除全部记录" />
+    <item android:id="@+id/menu_export" android:title="导出测试数据" />
+    <item android:id="@+id/menu_recover" android:title="恢复测试数据" />
+    <item android:id="@+id/menu_download_roster" android:title="下载测试名单" />
+</menu>

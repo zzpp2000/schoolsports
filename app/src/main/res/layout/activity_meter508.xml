@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/xxbeijing">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="50*8米跑测试仪"
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/m508teststart_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="50dp"
+        android:text="开始测试"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/m508testquary_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginLeft="50dp"
+        android:text="成绩查询"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/m508testhelp_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="490dp"
+        android:layout_marginLeft="50dp"
+        android:text="帮助"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/m508setup_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="950dp"
+        android:text="设置"
+        android:textSize="22sp"/>
+</RelativeLayout>

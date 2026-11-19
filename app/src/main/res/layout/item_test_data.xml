@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="#FFFFFF">
+
+    <TextView android:id="@+id/tv_card_num" style="@style/TableItem" android:layout_width="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/tv_name" style="@style/TableItem" android:layout_width="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/tv_project" style="@style/TableItem" android:layout_width="0dp" android:layout_weight="1.5"/>
+    <TextView android:id="@+id/tv_data" style="@style/TableItem" android:layout_width="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/tv_time" style="@style/TableItem" android:layout_width="0dp" android:layout_weight="2" android:textSize="11sp"/>
+    <TextView android:id="@+id/tv_status" style="@style/TableItem" android:layout_width="0dp" android:layout_weight="1"/>
+</LinearLayout>

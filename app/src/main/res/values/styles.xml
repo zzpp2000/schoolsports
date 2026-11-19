@@ -1,0 +1,44 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 定义表头样式 -->
+    <style name="TableHeader">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">4dp</item>
+    </style>
+
+    <!-- 定义表格内容样式（如果你在 item_test_data.xml 也用到了 TableItem，也要加上） -->
+    <style name="TableItem">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:paddingHorizontal">4dp</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Dialog">
+        <!-- 背景透明（让自定义圆角生效） -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 去掉系统自带的标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 允许悬浮 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 点击外部背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

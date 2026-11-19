@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_rounded"> <!-- 使用圆角背景 -->
+
+    <!-- 顶部标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2C3E50">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="项目设置"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- 表单区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 1. 项目名称 (终极包裹层方案) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+
+                <!-- 左侧标签 -->
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="项目名称"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+
+                <!-- 包裹层：接收点击事件的核心 -->
+                <LinearLayout
+                    android:id="@+id/ll_project_selector"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner_selector"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <!-- 内部展示当前选择的文字，不接收焦点 -->
+                    <TextView
+                        android:id="@+id/tv_project_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="身高体重"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <!-- 下拉箭头 -->
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        app:tint="#333333" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 2. 测试组数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="测试组数"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+                <EditText
+                    android:id="@+id/et_group_count"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- 3. 每组人数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="每组人数"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+                <EditText
+                    android:id="@+id/et_group_people"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:text="8"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- 4. 测试参数 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="测试参数(次)"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+                <EditText
+                    android:id="@+id/et_params"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- 5. 信道 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="信道"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+                <EditText
+                    android:id="@+id/et_channel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:text="0"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- 6. 组地址 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="组地址"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+                <EditText
+                    android:id="@+id/et_group_address"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="#F5F5F5">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="保存"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4A90E2"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:text="放弃更改"
+            android:textColor="#4A90E2"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

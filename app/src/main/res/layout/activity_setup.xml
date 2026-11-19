@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/xxbeijing">
+
+
+
+    <!-- “检索ID”按钮：位于“设置”按钮右侧，间距50dp，上边距150dp -->
+    <Button
+        android:id="@+id/searchid_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:text="检索ID"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/modifyid_btn"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:text="修改ID"
+        android:textSize="22sp" />
+
+    <!-- “ZigBee ID值”文本：位于“检索ID”按钮右侧，间距50dp，上边距140dp -->
+    <Button
+        android:id="@+id/searchip_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp"
+        android:text="检索IP"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/modifyip_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="350dp"
+        android:text="修改IP"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/searchid_tVw"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/searchid_btn"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:text="ZigBee ID值"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/modifyid_edt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchid_tVw"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@id/modifyid_btn"
+        android:hint="请输入Panid"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/red"
+        android:textSize="30sp" />
+
+    <!-- “设置”按钮：靠左，顶部对齐（marginTop=0），宽度100dp -->
+    <EditText
+        android:id="@+id/modifyip_edt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modifyid_edt"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@id/modifyid_btn"
+        android:hint="请输入ip"
+        android:inputType="text"
+        android:digits="0123456789."
+        android:padding="12dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/red"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/DvSetup_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/searchid_tVw"
+        android:layout_marginLeft="450dp"
+        android:layout_marginTop="0dp"
+        android:text="设置"
+        android:textSize="22sp" />
+</RelativeLayout>

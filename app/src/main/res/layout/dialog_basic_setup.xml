@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_rounded"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2C3E50">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="基础设置"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- 滚动表单区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1. 输入模式 (下拉选择) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="输入模式"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv_input_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:text="体测卡"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 2. 附件连接 (下拉选择) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="附件连接"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv_attachment"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="10dp"
+                    android:text="ZIGBEE"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 3. 测试完成后打印结果 (开关) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="测试完成后打印结果"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_print"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 4. 实时推送测试数据 (开关) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="实时推送测试数据"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 5. 学生照片导入 (点击按钮) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="学生照片导入"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv_import_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_spinner_selector"
+                    android:gravity="center"
+                    android:paddingHorizontal="15dp"
+                    android:text="导入"
+                    android:textColor="#4A90E2"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 6. 人脸库注册 (点击按钮) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="人脸库注册"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv_register_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_spinner_selector"
+                    android:gravity="center"
+                    android:paddingHorizontal="15dp"
+                    android:text="注册"
+                    android:textColor="#4A90E2"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 7. 服务器地址 (输入框) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="服务器地址"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/et_server_ip"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 8. 测试计划名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="测试计划名称"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/et_plan_name"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:text="默认计划名称"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 9. 扇区号 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="扇区号"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/et_sector"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:text="1,2"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 10. 单播周期 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="单播周期"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/et_unicast"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:text="50"
+                    android:inputType="number"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 11. 广播周期 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="广播周期"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/et_broadcast"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edit_text"
+                    android:paddingHorizontal="10dp"
+                    android:text="125"
+                    android:inputType="number"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="#F5F5F5">
+        <Button
+            android:id="@+id/btn_basic_save"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="保存"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4A90E2"
+            android:layout_marginEnd="10dp" />
+        <Button
+            android:id="@+id/btn_basic_cancel"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:text="放弃更改"
+            android:textColor="#4A90E2"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
